@@ -1,3 +1,23 @@
+* {
+  @apply text-white;
+}
+
+.section-title {
+  @apply text-2xl font-semibold text-red-500 mb-5;
+}
+
+.accordion-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+}
+
+/* Sadece active class'ı olan accordionların içeriği gösteriliyor */
+.accordion-content.active {
+  height: auto;
+  transition: height 0.3s ease-in;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
