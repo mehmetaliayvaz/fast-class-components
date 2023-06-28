@@ -2,27 +2,24 @@
   @apply text-white;
 }
 
-.section-title {
-  @apply text-2xl font-semibold text-red-500 mb-5;
+.accordion-button {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f1f1f1;
+  color: black;
 }
 
-.accordion-content {
-  height: 0;
+.accordion .accordion-content {
+  max-height: 0;
+  transition: all 600ms ease;
   overflow: hidden;
-  transition: 0.3s;
-}
-
-.accordion {
-  transition: 0.3s;
-}
-
-.accordion.active {
-  transition: 0.3s;
 }
 
 .accordion.active .accordion-content {
-  height: auto;
-  transition: 0.3s;
+  max-height: 500px;
+  overflow: revert;
 }
 
 @tailwind base;

@@ -1,33 +1,33 @@
 import "./style.css";
 
-window.addEventListener("load", function () {
-  // Tüm accordion butonlarını seçin
-  var accordionButtons = document.querySelectorAll(".accordion-button");
+const accordionButtons = document.querySelectorAll(".accordion-button");
 
-  // Her bir accordion butonuna tıklandığında çalışacak bir fonksiyon tanımlayın
-  function toggleAccordion() {
-    var accordion = this.parentElement;
-    // Seçilen accordionun içeriği seçiliyor
-    var accordionContent = this.nextElementSibling;
+accordionButtons.forEach((accordionButton) => {
+  accordionButton.addEventListener("click", () => {
 
-    accordion.classList.toggle("active");
-    // Seçilen accordionun içeriğine 'active' class'ı ekleniyor
-    accordionContent.classList.toggle("active");
+    const accordionGroup = accordionButton.parentElement.parentElement;
 
-    // Diğer tüm accordionların içerikleri kapatılıyor
-    if (this.parentElement.parentElement.classList.contains("accordions")) {
-      var accordions =
-        this.parentElement.parentElement.querySelectorAll(".accordion");
-      accordions.forEach(function (item) {
-        if (item !== accordion) {
-          item.classList.remove("active");
-        }
-      });
+    const contentHeight = accordionGroup.querySelector(".accordion-content").offsetHeight;
+    console.log(contentHeight)
+
+    if (accordionGroup.classList.contains("accordion-group")) {
+
+      if (accordionButton.parentElement.classList.contains("active")) {
+        accordionGroup.querySelectorAll(".accordion").forEach((accordion) => {
+          accordion.classList.remove("active");
+        });
+      }
+      else {
+        accordionGroup.querySelectorAll(".accordion").forEach((accordion) => {
+          accordion.classList.remove("active");
+        });
+
+        accordionButton.parentElement.classList.add("active");
+      }
     }
-  }
+    else {
+      accordionButton.parentElement.classList.toggle("active");
+    }
 
-  // Her bir accordion butonuna tıklandığında toggleAccordion fonksiyonu çağırılıyor
-  accordionButtons.forEach(function (accordionButton) {
-    accordionButton.addEventListener("click", toggleAccordion);
   });
 });
