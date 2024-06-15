@@ -2,171 +2,188 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
 </head>
 
-<body class="bg-gray-900">
-    <section>
-        <div class="container">
-            <div class="py-20">
-                <h1 class="font-bold text-center text-3xl mb-5">Fast Class Components</h1>
-                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, deleniti!</p>
-            </div>
+<body class="bg-[#131723]">
+  <section>
+    <div class="container">
+      <div class="py-20">
+        <h1 class="font-bold text-center text-3xl mb-5">Fast Class Components</h1>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, deleniti!</p>
+      </div>
+    </div>
+  </section>
+
+  <div>
+    <div class="container">
+      <div class="flex gap-10">
+        <div class="w-80">
+          <ul class="grid gap-2">
+            <li>
+              <a href="#accordion">Accordion</a>
+            </li>
+            <li>
+              <a href="#modal">Modal</a>
+            </li>
+            <li>
+              <a href="#dropdown">Dropdown</a>
+            </li>
+            <li>
+              <a href="#tab">Tab</a>
+            </li>
+            <li>
+              <a href="#tooltip">Tooltip</a>
+            </li>
+          </ul>
         </div>
-    </section>
-    <section>
-        <div class="container">
-            <div>
-                <h2 class="section-title">Accordion</h2>
-
-                <h1>Accordion that only shows one at a time...</h2>
-                    <br><br>
-
-
-                    <div class="accordion">
-                        <button class="accordion-button">Accordion 1</button>
-                        <div class="accordion-content">
-                            <div class="p-5">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                    voluptates. Quisquam, quibusdam voluptates.
-                                </p>
-                            </div>
-                        </div>
+        <div class="w-full grid gap-20">
+          <section>
+            <h2 class="section-title">Accordion</h2>
+            <div class="flex gap-10 mb-10">
+              <div class="lg:w-1/2 code">
+                <code>
+                <pre>
+&lt;div class="accordion"&gt;
+  &lt;button class="accordion-button"&gt;Accordion 1&lt;/button&gt;
+  &lt;div class="accordion-content"&gt;
+    &lt;div class="p-5"&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur ...
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+              </code>
+              </div>
+              <div class="lg:w-1/2">
+                <div class="accordion">
+                  <button class="accordion-button">Accordion 1</button>
+                  <div class="accordion-content">
+                    <div class="p-5">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
+                        voluptates. Quisquam, quibusdam voluptates.
+                      </p>
                     </div>
-
-                    <div class="accordion">
-                        <button class="accordion-button">Accordion 2</button>
-                        <div class="accordion-content">
-                            <div class="p-5">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                    voluptates. Quisquam, quibusdam voluptates.
-                                </p>
-                            </div>
-                        </div>
+                  </div>
+                </div>
+                <div class="accordion">
+                  <button class="accordion-button">Accordion 2</button>
+                  <div class="accordion-content">
+                    <div class="p-5">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
+                        voluptates. Quisquam, quibusdam voluptates.
+                      </p>
                     </div>
-
-                    <br><br><br>
-
-                    <div class="accordion-group">
-                        <div class="accordion">
-                            <button class="accordion-button">Accordion 3</button>
-                            <div class="accordion-content">
-                                <div class="">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion">
-                            <button class="accordion-button">Accordion 3</button>
-                            <div class="accordion-content">
-                                <div class="">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion">
-                            <button class="accordion-button">Accordion 4</button>
-                            <div class="accordion-content">
-                                <div class="p-5">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <br><br><br>
-
-                    <div class="accordion-group">
-                        <div class="accordion">
-                            <button class="accordion-button">Accordion 3</button>
-                            <div class="accordion-content">
-                                <div class="">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion">
-                            <button class="accordion-button">Accordion 3</button>
-                            <div class="accordion-content">
-                                <div class="">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion">
-                            <button class="accordion-button">Accordion 4</button>
-                            <div class="accordion-content">
-                                <div class="p-5">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
-                                        voluptates. Quisquam, quibusdam voluptates.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </section>
+            <div class="flex gap-10">
+              <div class="lg:w-1/2 code">
+                <code>
+                <pre>
+&lt;div class="accordion"&gt;
+  &lt;button class="accordion-button"&gt;Accordion 2&lt;/button&gt;
+  &lt;div class="accordion-content"&gt;
+    &lt;div class="p-5"&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur ...
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+              </code>
+              </div>
+              <div class="lg:w-1/2">
+                <div class="accordion-group">
+                  <div class="accordion">
+                    <button class="accordion-button">Accordion 3</button>
+                    <div class="accordion-content">
+                      <div class="">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
+                          voluptates. Quisquam, quibusdam voluptates.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
+                          voluptates. Quisquam, quibusdam voluptates.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-    <script type="module" src="./main.js"></script>
+                  <div class="accordion">
+                    <button class="accordion-button">Accordion 3</button>
+                    <div class="accordion-content">
+                      <div class="">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
+                          voluptates. Quisquam, quibusdam voluptates.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
+                          voluptates. Quisquam, quibusdam voluptates.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion">
+                    <button class="accordion-button">Accordion 4</button>
+                    <div class="accordion-content">
+                      <div class="p-5">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
+                          voluptates. Quisquam, quibusdam voluptates.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="section-title">Modal</h2>
+            <div class="flex gap-10 mb-10">
+              <div class="lg:w-1/2 code">
+                <code>
+                <pre>
+&lt;button class="modal-btn"&gt;Open Modal&lt;/button&gt;
+&lt;div class="modal"&gt;
+  &lt;div class="modal-mask"&gt;&lt;/div&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;button class="modal-content-close"&gt;X&lt;/button&gt;
+    modal content modal content
+    modal contentmodal contentmodal content
+    modal contentmodal contentmodal contentmodal content
+  &lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+              </code>
+              </div>
+              <div class="lg:w-1/2 relative">
+                <button class="modal-btn">Open Modal</button>
+                <div class="modal">
+                  <div class="modal-mask"></div>
+                  <div class="modal-content">
+                    <button class="modal-content-close">X</button>
+                    lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
 </body>
 
 </html>

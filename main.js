@@ -2,6 +2,8 @@ import "./style.css";
 
 // Document loaded
 document.addEventListener("DOMContentLoaded", () => {
+
+  // Accordion
   document.querySelectorAll(".accordion-button").forEach((button) => {
     button.addEventListener("click", () => {
       const accordion = button.parentElement;
@@ -31,4 +33,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Modal
+  document.querySelectorAll(".modal-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      const modal = button.nextElementSibling;
+      modal.style.display = "flex";
+    });
+  });
+
+  document.querySelectorAll(".modal-mask, .modal-content-close").forEach((element) => {
+    element.addEventListener("click", () => {
+      element.closest(".modal").style.display = "none";
+    });
+  });
+
+
 });

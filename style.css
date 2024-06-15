@@ -20,6 +20,54 @@
 .accordion.active .accordion-content {
 }
 
+.modal-btn {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .modal-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal .modal-content {
+  position: relative;
+  background-color: white;
+  padding: 40px;
+  border-radius: 5px;
+  color: black;
+}
+
+.modal .modal-content .modal-content-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.code {
+  @apply bg-slate-600 p-4 rounded-lg;
+}
+
+.section-title {
+  @apply text-2xl font-bold mb-4;
+}
