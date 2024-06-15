@@ -1,61 +1,37 @@
 import "./style.css";
 
-//döküman yüklenince 
-
+// Document loaded
 document.addEventListener("DOMContentLoaded", function () {
   const accordionButtons = document.querySelectorAll(".accordion-button");
 
-  accordionButtons.forEach((accordionButton) => {
-    accordionButton.addEventListener("click", () => {
+  accordionButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const accordion = button.parentElement;
+      const accordionGroup = accordion.parentElement;
 
-      const accordionGroup = accordionButton.parentElement.parentElement;
-
-      // if there is an accordion group
+      // If accordion group exists
       if (accordionGroup.classList.contains("accordion-group")) {
-        // if the clicked accordion button is already active
-        if (accordionButton.parentElement.classList.contains("active")) {
-          accordionGroup.querySelectorAll(".accordion").forEach((accordion) => {
-            accordion.classList.remove("active");
+        const isActive = accordion.classList.contains("active");
 
-            var content = accordion.querySelector(".accordion-content");
-            if (content?.style?.maxHeight) {
-              content.style.maxHeight = null;
-            }
+        // Deactivate all accordions
+        accordionGroup.querySelectorAll(".accordion").forEach((acc) => {
+          acc.classList.remove("active");
+          acc.querySelector(".accordion-content").style.maxHeight = null;
+        });
 
-          });
-        }
-
-        // If the clicked accordion button is not active
-        else {
-          accordionGroup.querySelectorAll(".accordion").forEach((accordion) => {
-            accordion.classList.remove("active");
-
-            var content = accordion.querySelector(".accordion-content");
-            if (content?.style?.maxHeight) {
-              content.style.maxHeight = null;
-            }
-          });
-
-          accordionButton.parentElement.classList.add("active");
-
-          var panel = accordionButton.nextElementSibling;
-          panel.style.maxHeight = panel.scrollHeight + "px";
+        // Activate clicked accordion if it was not active
+        if (!isActive) {
+          accordion.classList.add("active");
+          accordion.querySelector(".accordion-content").style.maxHeight =
+            accordion.querySelector(".accordion-content").scrollHeight + "px";
         }
       }
-
-      // If there is no accordion group
+      // If no accordion group
       else {
-        accordionButton.parentElement.classList.toggle("active");
-
-        var panel = accordionButton.nextElementSibling;
-
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
+        accordion.classList.toggle("active");
+        const content = button.nextElementSibling;
+        content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
       }
-
     });
   });
 });
