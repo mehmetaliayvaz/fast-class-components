@@ -75,6 +75,10 @@
   z-index: 1;
 }
 
+.tab-item {
+  display: none;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

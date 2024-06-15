@@ -65,4 +65,58 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // <div class="tab">
+  //   <button class="tab-btn">Tab 1</button>
+  //   <button class="tab-btn">Tab 2</button>
+  //   <button class="tab-btn">Tab 3</button>
+  //   <div class="tab-content">
+  //     <div class="tab-item">
+  //       <p>Tab 1 Content</p>
+  //     </div>
+  //     <div class="tab-item">
+  //       <p>Tab 2 Content</p>
+  //     </div>
+  //     <div class="tab-item">
+  //       <p>Tab 3 Content</p>
+  //     </div>
+  //   </div>
+  // </div>
+
+  // Tab componenti: ilk başta ilk tab-item açık olsun. eğer ilk tab-btn hariç diğerlerinden biri active ise başlangıçta onun tab-item'ı açık olsun
+  document.querySelectorAll(".tab").forEach((tab) => {
+    const tabBtns = tab.querySelectorAll(".tab-btn");
+    const tabItems = tab.querySelectorAll(".tab-item");
+
+    tabBtns.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        tabBtns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+        button.classList.add("active");
+
+        tabItems.forEach((item) => {
+          item.style.display = "none";
+        });
+        tabItems[index].style.display = "block";
+      });
+    });
+
+    // ilk tab-item'ı açık yap
+    tabItems[0].style.display = "block";
+    //eğer hiç active tab-btn yoksa ilk tab-btn ye active class'ını ekle
+    const activeBtn = tab.querySelector(".tab-btn.active");
+    if (!activeBtn) {
+      tabBtns[0].classList.add("active");
+    }
+
+    // ilk tab-btn active değilse onun tab-item'ını açık yap
+    if (activeBtn) {
+      const index = Array.from(tabBtns).indexOf(activeBtn);
+      tabItems.forEach((item) => {
+        item.style.display = "none";
+      });
+      tabItems[index].style.display = "block";
+    }
+  });
+
 });
