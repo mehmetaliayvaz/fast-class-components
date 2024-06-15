@@ -48,5 +48,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // dropdown
+  document.querySelectorAll(".dropdown-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      const dropdown = button.nextElementSibling;
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    });
+  });
+
+  // dropdownın dışına tıklanırsa kapat
+  document.addEventListener("click", (event) => {
+    if (!event.target.matches(".dropdown-btn")) {
+      document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
+        dropdown.style.display = "none";
+      });
+    }
+  });
 
 });
