@@ -1,13 +1,12 @@
 import "./style.css";
 
 // Document loaded
-document.addEventListener("DOMContentLoaded", function () {
-  const accordionButtons = document.querySelectorAll(".accordion-button");
-
-  accordionButtons.forEach((button) => {
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".accordion-button").forEach((button) => {
     button.addEventListener("click", () => {
       const accordion = button.parentElement;
       const accordionGroup = accordion.parentElement;
+      const content = button.nextElementSibling;
 
       // If accordion group exists
       if (accordionGroup.classList.contains("accordion-group")) {
@@ -22,14 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
         // Activate clicked accordion if it was not active
         if (!isActive) {
           accordion.classList.add("active");
-          accordion.querySelector(".accordion-content").style.maxHeight =
-            accordion.querySelector(".accordion-content").scrollHeight + "px";
+          content.style.maxHeight = content.scrollHeight + "px";
         }
       }
       // If no accordion group
       else {
         accordion.classList.toggle("active");
-        const content = button.nextElementSibling;
         content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
       }
     });
